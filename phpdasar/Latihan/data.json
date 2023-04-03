@@ -1,0 +1,20 @@
+[
+    {
+        "nama": "Rayhan",
+        "merk": "Mitsubishi Xpander",
+        "alamat": "Bekasi",
+        "tglpinjam": "26-05-2022",
+        "tglkembali": "28-05-2022",
+        "lamapinjam": 2,
+        "harga": 600000
+    },
+    {
+        "nama": "Aho",
+        "merk": "Suzuki Ertiga",
+        "alamat": "Bekasi",
+        "tglpinjam": "05-06-2022",
+        "tglkembali": "08-06-2022",
+        "lamapinjam": 3,
+        "harga": 810000
+    }
+]

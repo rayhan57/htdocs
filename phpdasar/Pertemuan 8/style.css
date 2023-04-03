@@ -1,0 +1,38 @@
+.sidebar {
+  width: 15%;
+  height: 100vh;
+}
+
+i {
+  color: white;
+  margin-right: 1rem;
+}
+
+.nav-link:hover {
+  background: rgb(30, 128, 255);
+}
+
+.bar:hover {
+  cursor: pointer;
+}
+
+.close {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .sidebar {
+    width: 50%;
+    height: 150vh;
+    position: absolute;
+    z-index: 10;
+  }
+
+  .close {
+    display: block;
+  }
+
+  .title {
+    padding-top: 1rem;
+  }
+}
