@@ -88,7 +88,7 @@ class Game extends Produk {
 }
 
 class CetakInfoProduk {
-    public $daftarProduk = array();
+    public $daftarProduk = [];
 
     public function tambahProduk(Produk $produk) {
         $this->daftarProduk[] = $produk;
