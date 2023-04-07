@@ -5,6 +5,7 @@ class About extends Controller {
         $data['param1'] = $param1;
         $data['param2'] = $param2;
         $data['title'] = "About Page";
+
         $this->view('templates/header', $data);
         $this->view('about/index', $data);
         $this->view('templates/header');
