@@ -8,4 +8,12 @@ class Mahasiswa extends Controller {
         $this->view('mahasiswa/index', $data);
         $this->view('templates/footer');
     }
+
+    public function detail($npm) {
+        $data['title'] = "Scholar Detail";
+        $data['mhs'] = $this->model('Mahasiswa_model')->getMahasiswaByNpm($npm);
+        $this->view('templates/header', $data);
+        $this->view('mahasiswa/detail', $data);
+        $this->view('templates/footer');
+    }
 }
