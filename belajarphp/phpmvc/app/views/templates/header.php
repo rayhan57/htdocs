@@ -28,9 +28,9 @@
                         <a class="nav-link" href="<?= BASEURL; ?>/about">About</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                <form class="d-flex" role="search" action="<?= BASEURL ?>/mahasiswa/cari" method="post">
+                    <input class="form-control me-2" type="search" placeholder="Cari mahasiswa" aria-label="Search" name="cari" autocomplete="off">
+                    <button class="btn btn-outline-success btnCari" type="submit">Cari</button>
                 </form>
             </div>
         </div>

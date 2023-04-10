@@ -21,7 +21,7 @@ $(function () {
       success: function (data) {
         $("#nama").val(data.nama);
         $("#npm").val(data.npm);
-        $("#nama").val(data.jurusan);
+        $("#jurusan").val(data.jurusan);
       },
     });
   });
