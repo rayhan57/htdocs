@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary bg-info bg-gradient" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary bg-gradient" data-bs-theme="dark">
     <div class="container">
         <a class="navbar-brand" href="/">RLB Web</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,7 +13,10 @@
                     <a class="nav-link {{ ($title == "About") ? 'active' : '' }}" href="/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ ($title == "Blog") ? 'active' : '' }}" href="/blog">Blog</a>
+                    <a class="nav-link {{ ($title == "All Posts") ? 'active' : '' }}" href="/blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ ($title == "Categories") ? 'active' : '' }}" href="/categories">Categories</a>
                 </li>
             </ul>
         </div>

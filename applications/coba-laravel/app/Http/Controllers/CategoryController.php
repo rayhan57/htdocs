@@ -12,12 +12,4 @@ class CategoryController extends Controller {
             'categories' => Category::all()
         ]);
     }
-
-    public function show(Category $category) {
-        return view('category', [
-            'title' => $category->name,
-            'posts' => $category->posts,
-            'category' => $category->name
-        ]);
-    }
 }

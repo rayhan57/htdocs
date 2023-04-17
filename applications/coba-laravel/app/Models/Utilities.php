@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Facades\Date;
+
 class Utilities {
 
-    public static function getWaktu() {
+    public static function getTanggal() {
         setlocale(LC_TIME, 'id_ID');
-        $waktu = strftime('%A, %d-%m-%Y');
-        return $waktu;
+        $tanggal = strftime('%A, %d-%b-%Y');
+        return $tanggal;
     }
 }

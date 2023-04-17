@@ -42,11 +42,6 @@ class UserController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function show(User $user) {
-        return view('user', [
-            'title' => $user->name,
-            'posts' => $user->posts,
-            'user' => $user->name
-        ]);
     }
 
     /**

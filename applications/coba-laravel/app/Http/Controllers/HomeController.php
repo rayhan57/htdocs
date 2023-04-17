@@ -10,7 +10,7 @@ class HomeController extends Controller {
     public function index() {
         return view('home', [
             "title" => "Home",
-            "waktu" => Utilities::getWaktu()
+            "tanggal" => Utilities::getTanggal()
         ]);
     }
 }

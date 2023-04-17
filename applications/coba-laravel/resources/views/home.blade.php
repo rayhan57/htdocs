@@ -1,5 +1,5 @@
 @extends('layouts.main')
 @section('container')    
 <h1>Halaman home</h1>
-<h2 class="text-center">{{ $waktu }}</h2>
+<h2 class="text-center">{{ $tanggal }}</h2>
 @endsection
