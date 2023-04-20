@@ -13,7 +13,7 @@
             @endif
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Search Posts..." name="search" value="{{ request('search') }}" autocomplete="off">
-                <button class="btn btn-outline-primary" type="submit">Search</button>
+                <button class="btn btn-outline-info" type="submit">Search</button>
             </div>
         </form>
     </div>
@@ -21,12 +21,12 @@
 
 @if ($posts->count())
 <div class="card mb-4">
-    <img src="https://source.unsplash.com/1000x300?{{ $posts[0]->category->name }}" class="card-img-top" alt="...">
+    <img src="https://source.unsplash.com/1000x400?{{ $posts[0]->category->name }}" class="card-img-top" alt="...">
     <div class="card-body">
         <h4 class="card-title">{{ $posts[0]->title }}</h4>
         <p>By: <a href="/blog?user={{ $posts[0]->user->slug }}" class="text-decoration-none">{{ $posts[0]->user->name }}</a> in <a href="/blog?category={{ $posts[0]->category->slug }}" class="text-decoration-none">{{ $posts[0]->category->name }}</a></p>
         <p class="card-text">{{ $posts[0]->excerpt }}</p>
-        <a href="/posts/{{ $posts[0]->slug }}" class="btn btn-primary">Read more</a>
+        <a href="/posts/{{ $posts[0]->slug }}" class="btn btn-info">Read more</a>
         <p class="card-text"><small class="text-body-secondary">{{ $posts[0]->created_at->diffForHumans() }}</small></p>
     </div>
 </div>
@@ -41,7 +41,7 @@
                     <h5 class="card-title">{{ $post->title }}</h5>
                     <p>By: <a href="/blog?user={{ $post->user->slug }}" class="text-decoration-none">{{ $post->user->name }}</a> in <a href="/blog?category={{ $post->category->slug }}" class="text-decoration-none">{{ $post->category->name }}</a></p>
                     <p class="card-text">{{ $post->excerpt }}</p>
-                    <a href="/posts/{{ $post->slug }}" class="btn btn-primary">Read more</a>
+                    <a href="/posts/{{ $post->slug }}" class="btn btn-info">Read more</a>
                     <p class="card-text"><small class="text-body-secondary">{{ $post->created_at->diffForHumans() }}</small></p>
                 </div>
             </div>
