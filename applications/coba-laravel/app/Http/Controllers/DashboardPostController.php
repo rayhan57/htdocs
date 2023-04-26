@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardPostController extends Controller {
     /**
@@ -43,6 +44,7 @@ class DashboardPostController extends Controller {
             'title' => 'required|max:255',
             'slug' => 'required|unique:posts',
             'category' => 'required',
+            'image' => 'image|file|max:1024',
             'body' => 'required'
         ]);
 
@@ -52,6 +54,7 @@ class DashboardPostController extends Controller {
             'title' => $request->title,
             'slug' => $request->slug,
             'excerpt' => Str::limit(strip_tags($request->body), 200),
+            'image' => $request->file('image')->store('post-image'),
             'body' => $request->body
         ]);
         return redirect('/dashboard/posts')->with('success', 'Your post has been successfully added');
@@ -77,7 +80,11 @@ class DashboardPostController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function edit(Post $post) {
-        //
+        return view('dashboard.posts.edit', [
+            'title' => 'Dashboard Post',
+            'post' => $post,
+            'categories' => Category::all()
+        ]);
     }
 
     /**
@@ -88,7 +95,31 @@ class DashboardPostController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Post $post) {
-        //
+        $request->validate([
+            'title' => 'required|max:255',
+            'slug' => 'required|unique:posts,slug,' . $post->id,
+            'category' => 'required',
+            'image' => 'image|file|max:2048',
+            'body' => 'required'
+        ]);
+
+        if ($request->oldImage) { //Jika ada gambar lama di storage maka hapus dan pakai yg baru.
+            Storage::delete($request->oldImage);
+            $imagePath = $request->file('image')->store('post-image');
+        } else { //jika tidak maka pakai gambar lamanya.
+            $imagePath = $post->image;
+        }
+
+        Post::where('id', $post->id)->update([
+            'category_id' => $request->category,
+            'user_id' => auth()->user()->id,
+            'title' => $request->title,
+            'slug' => $request->slug,
+            'excerpt' => Str::limit(strip_tags($request->body), 200),
+            'image' => $imagePath,
+            'body' => $request->body
+        ]);
+        return redirect('/dashboard/posts')->with('success', 'Your post has been successfully updated');
     }
 
     /**
@@ -98,6 +129,10 @@ class DashboardPostController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function destroy(Post $post) {
-        //
+        if ($post->image) {
+            Storage::delete($post->image);
+        }
+        Post::destroy($post->id);
+        return redirect('/dashboard/posts')->with('success', 'Your post has been successfully deleted');
     }
 }

@@ -21,7 +21,11 @@
 
 @if ($posts->count())
 <div class="card mb-4">
-    <img src="https://source.unsplash.com/1000x400?{{ $posts[0]->category->name }}" class="card-img-top" alt="...">
+    @if ($posts[0]->image)
+    <img src="{{ asset('storage/' . $posts[0]->image) }}" class="card-img-top pb-2" width="1000" height="400">
+    @else
+    <img src="https://source.unsplash.com/1000x400?{{ $posts[0]->category->name }}" class="card-img-top pb-2">
+    @endif
     <div class="card-body">
         <h4 class="card-title">{{ $posts[0]->title }}</h4>
         <p>By: <a href="/blog?user={{ $posts[0]->user->slug }}" class="text-decoration-none">{{ $posts[0]->user->name }}</a> in <a href="/blog?category={{ $posts[0]->category->slug }}" class="text-decoration-none">{{ $posts[0]->category->name }}</a></p>
@@ -36,7 +40,11 @@
         @foreach($posts->skip(1) as $post)
         <div class="col-md-4">
             <div class="card mb-3">
-                <img src="https://source.unsplash.com/1000x500?{{ $post->category->name }}" class="card-img-top" alt="...">
+                @if ($post->image)
+                <img src="{{ asset('storage/' . $post->image) }}" class="card-img-top pb-2" width="1000" height="500">
+                @else   
+                <img src="https://source.unsplash.com/1000x500?{{ $post->category->name }}" class="card-img-top pb-2">
+                @endif
                 <div class="card-body">
                     <h5 class="card-title">{{ $post->title }}</h5>
                     <p>By: <a href="/blog?user={{ $post->user->slug }}" class="text-decoration-none">{{ $post->user->name }}</a> in <a href="/blog?category={{ $post->category->slug }}" class="text-decoration-none">{{ $post->category->name }}</a></p>
