@@ -1,23 +1,11 @@
-fetch("mahasiswa.json")
-  .then((response) => response.json())
-  .then((data) => {
-    const tableBody = document.querySelector("tbody");
-    let tableData = "";
-    let no = 1;
-    data.forEach((mhs) => {
-      tableData += `
-        <tr>
-          <th scope="row">${no++}</th>
-          <td>${mhs.nama}</td>
-          <td>${mhs.umur}</td>
-          <td>${mhs.jurusan}</td>
-          <td>
-          <a href="" class="btn btn-sm btn-warning">Edit</a>
-          <a href="" class="btn btn-sm btn-danger">Hapus</a>
-          </td>
-        </tr>
-      `;
-    });
-    tableBody.innerHTML = tableData;
-  })
-  .catch((error) => console.log(error));
+function cekBrowser() {
+  const meessage = document.querySelector(".meessage");
+  if (typeof Storage !== "undefined") {
+    meessage.innerHTML =
+      '<div class="alert alert-success alert-dismissible fade show" role="alert"><strong>Hooray!</strong> The browser you are using supports local storage.<button type="button"class="btn-close"data-bs-dismiss="alert"aria-label="Close"></button></div>';
+  } else {
+    meessage.innerHTML =
+      '<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Sorry!</strong> The browser you are using does not supports local storage.<button type="button"class="btn-close"data-bs-dismiss="alert"aria-label="Close"></button></div>';
+  }
+}
+cekBrowser();
