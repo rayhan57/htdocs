@@ -1,0 +1,17 @@
+[
+  {
+    "nama": "Rayhan",
+    "umur": 22,
+    "jurusan": "Informatika"
+  },
+  {
+    "nama": "Adam",
+    "umur": 24,
+    "jurusan": "Industri"
+  },
+  {
+    "nama": "Sandy",
+    "umur": 21,
+    "jurusan": "Mesin"
+  }
+]
