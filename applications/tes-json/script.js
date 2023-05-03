@@ -1,11 +1,130 @@
 function cekBrowser() {
-  const meessage = document.querySelector(".meessage");
-  if (typeof Storage !== "undefined") {
-    meessage.innerHTML =
-      '<div class="alert alert-success alert-dismissible fade show" role="alert"><strong>Hooray!</strong> The browser you are using supports local storage.<button type="button"class="btn-close"data-bs-dismiss="alert"aria-label="Close"></button></div>';
-  } else {
-    meessage.innerHTML =
-      '<div class="alert alert-danger alert-dismissible fade show" role="alert"><strong>Sorry!</strong> The browser you are using does not supports local storage.<button type="button"class="btn-close"data-bs-dismiss="alert"aria-label="Close"></button></div>';
+  if (typeof Storage === "undefined") {
+    alert("Browser Anda tidak mendukung local storage.");
   }
 }
 cekBrowser();
+
+function formatTanggal(tanggal) {
+  const arrayTanggal = tanggal.split("-"); // 2023-04-31 jadi [2023,04,31]
+  const hari = arrayTanggal[2];
+  const bulan = arrayTanggal[1];
+  const tahun = arrayTanggal[0];
+  return `${hari}-${bulan}-${tahun}`;
+}
+
+let keyword;
+function tambahData() {
+  const tanggal = document.getElementById("tanggal").value;
+  const keterangan = document.getElementById("keterangan").value;
+  const pendapatan = document.getElementById("pendapatan").value;
+  const pengeluaran = document.getElementById("pengeluaran").value;
+  const tombolTambah = document.querySelector(".modal-footer button");
+
+  if (!tanggal || !keterangan || !pendapatan || !pengeluaran) {
+    alert("Data belum diisi.");
+    return;
+  }
+
+  if (tombolTambah.innerText === "Tambah") {
+    tambahBiodata(tanggal, keterangan, pendapatan, pengeluaran);
+    alert("Data berhasil ditambahkan.");
+  } else {
+    ubahBiodata(tanggal, keterangan, pendapatan, pengeluaran);
+    alert("Data berhasil diubah.");
+  }
+}
+
+function tambahBiodata(tanggal, keterangan, pendapatan, pengeluaran) {
+  const biodata = JSON.parse(localStorage.getItem("BIODATA")) || [];
+  biodata.push({
+    tanggal: formatTanggal(tanggal),
+    keterangan: keterangan,
+    pendapatan: pendapatan,
+    pengeluaran: pengeluaran,
+  });
+  localStorage.setItem("BIODATA", JSON.stringify(biodata));
+  location.reload();
+}
+
+function ubahBiodata(tanggal, keterangan, pendapatan, pengeluaran) {
+  const biodata = JSON.parse(localStorage.getItem("BIODATA")) || [];
+  biodata.findIndex((data) => {
+    if (data.keterangan === keyword) {
+      data.tanggal = formatTanggal(tanggal);
+      data.keterangan = keterangan;
+      data.pendapatan = pendapatan;
+      data.pengeluaran = pengeluaran;
+    }
+  });
+  localStorage.setItem("BIODATA", JSON.stringify(biodata));
+  location.reload();
+}
+
+function tampilkanData() {
+  let no = 1;
+  const biodata = JSON.parse(localStorage.getItem("BIODATA"));
+  const tabelBody = document.querySelector("tbody");
+
+  for (const data of biodata) {
+    tabelBody.innerHTML += `<tr><th scope="row">${no++}</th><td>${
+      data.tanggal
+    }</td><td>${data.keterangan}</td><td>${data.pendapatan}</td><td>${
+      data.pengeluaran
+    }</td><td><button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#modalTambahData" onclick="editData('${
+      data.keterangan
+    }')"><i class="bi bi-pencil-square"></i></button> <button class="btn btn-sm btn-danger" onclick="hapusData('${
+      data.keterangan
+    }')"><i class="bi bi-trash"></i></button></td></tr>`;
+  }
+}
+tampilkanData();
+
+function hapusData(keterangan) {
+  const konfirmasi = confirm(`Yakin ingin menghapus ${keterangan}?`);
+  if (!konfirmasi) return;
+
+  const biodata = JSON.parse(localStorage.getItem("BIODATA"));
+  const index = biodata.findIndex((data) => data.keterangan === keterangan);
+  biodata.splice(index, 1);
+  localStorage.setItem("BIODATA", JSON.stringify(biodata));
+  location.reload();
+  alert(`Berhasil menghapus ${keterangan}`);
+}
+
+const judulModal = document.querySelector(".modal-title");
+const modalFooter = document.querySelector(".modal-footer button");
+
+function editData(key) {
+  keyword = key;
+  const tanggal = document.getElementById("tanggal");
+  const keterangan = document.getElementById("keterangan");
+  const pendapatan = document.getElementById("pendapatan");
+  const pengeluaran = document.getElementById("pengeluaran");
+
+  const biodata = JSON.parse(localStorage.getItem("BIODATA"));
+  biodata.findIndex((data) => {
+    if (data.keterangan === keyword) {
+      tanggal.value = data.tanggal;
+      keterangan.value = data.keterangan;
+      pendapatan.value = data.pendapatan;
+      pengeluaran.value = data.pengeluaran;
+    }
+  });
+
+  // Ubah tulisan tambah jadi ubah
+  judulModal.innerHTML = "Ubah Data";
+  modalFooter.innerHTML = "Ubah";
+}
+
+function klikTambahData() {
+  const tombolTambahData = document.querySelector(".tambah-data");
+  const form = document.querySelector("form");
+
+  tombolTambahData.addEventListener("click", function () {
+    form.reset();
+    judulModal.innerHTML = "Tambah Data";
+    modalFooter.innerHTML = "Tambah";
+  });
+}
+klikTambahData();
