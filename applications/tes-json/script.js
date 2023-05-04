@@ -40,8 +40,8 @@ function tambahBiodata(tanggal, keterangan, pendapatan, pengeluaran) {
   biodata.push({
     tanggal: formatTanggal(tanggal),
     keterangan: keterangan,
-    pendapatan: pendapatan,
-    pengeluaran: pengeluaran,
+    pendapatan: formatRupiah(pendapatan),
+    pengeluaran: formatRupiah(pengeluaran),
   });
   localStorage.setItem("BIODATA", JSON.stringify(biodata));
   location.reload();
@@ -53,8 +53,8 @@ function ubahBiodata(tanggal, keterangan, pendapatan, pengeluaran) {
     if (data.keterangan === keyword) {
       data.tanggal = formatTanggal(tanggal);
       data.keterangan = keterangan;
-      data.pendapatan = pendapatan;
-      data.pengeluaran = pengeluaran;
+      data.pendapatan = formatRupiah(pendapatan);
+      data.pengeluaran = formatRupiah(pengeluaran);
     }
   });
   localStorage.setItem("BIODATA", JSON.stringify(biodata));
@@ -128,3 +128,13 @@ function klikTambahData() {
   });
 }
 klikTambahData();
+
+function formatRupiah(angka) {
+  const uang = new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+  })
+    .format(angka)
+    .replace(",00", "");
+  return uang;
+}
