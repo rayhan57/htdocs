@@ -1,0 +1,124 @@
+[
+  {
+    "judul": "Cara Mendaftar di GitLab",
+    "slug": "register",
+    "langkah": [
+      "Buka situs GitLab di https://gitlab.com/",
+      "Klik tombol \"Sign In / Register\" di bagian kanan atas halaman.",
+      "Lalu pilih opsi \"Register now\" di bawah kotak masuk.",
+      "Masukkan informasi yang diperlukan, seperti username, alamat email, dan password.",
+      "Verifikasi akun Anda melalui email yang dikirimkan oleh GitLab."
+    ],
+    "deskripsi": ""
+  },
+  {
+    "judul": "Cara Login di Gitlab",
+    "slug": "login",
+    "langkah": [
+      "Buka situs GitLab di https://gitlab.com/",
+      "Klik tombol \"Sign In / Register\" di bagian kanan atas halaman.",
+      "Masukkan username atau alamat email, dan password yang telah dibuat saat mendaftar.",
+      "Klik tombol \"Sign In\" untuk masuk ke akun Anda."
+    ],
+    "deskripsi": ""
+  },
+  {
+    "judul": "Cara Membuat Repository",
+    "slug": "buat-repo",
+    "langkah": [
+      "Login ke akun GitLab Anda.",
+      "Klik tombol \"+\" di bagian atas kanan halaman.",
+      "Pilih opsi \"New project\" dari menu drop-down setelah itu pilih “Create blank project”.",
+      "Berikan nama dan deskripsi untuk repo Anda.",
+      "Pilih jenis aksesibilitas repo, apakah public atau private.",
+      "Setelah selesai klik tombol \"Create project\" untuk membuat repo baru."
+    ],
+    "deskripsi": ""
+  },
+  {
+    "judul": "Cara Rebase",
+    "slug": "rebase",
+    "langkah": [
+      "Checkout branch yang ingin Anda rebase.",
+      "Jalankan perintah <b>‘git fetch’</b> untuk mengambil update dari branch utama.",
+      "Jalankan perintah <b>‘git rebase origin/master’</b> untuk melakukan rebase dengan branch master.",
+      "Resolusi konflik jika ada, lalu jalankan perintah <b>‘git rebase --continue’</b>.",
+      "Setelah selesai, push branch Anda ke repo dengan perintah <b>‘git push -f’</b>."
+    ],
+    "deskripsi": "Rebase adalah proses memperbarui branch Anda dengan branch utama dan menempatkan perubahan Anda di atasnya."
+  },
+  {
+    "judul": "Cara Commit",
+    "slug": "commit",
+    "langkah": [
+      "Buka terminal atau command prompt.",
+      "Masuk ke direktori repo Anda.",
+      "Jalankan perintah <b>‘git add [nama-file]’</b> untuk menambahkan file ke staging area.",
+      "Jalankan perintah <b>‘git commit -m \"pesan commit\"’</b> untuk melakukan commit dengan pesan yang sesuai.",
+      "Push commit Anda ke repo dengan perintah git push."
+    ],
+    "deskripsi": "Commit adalah proses menyimpan perubahan yang dilakukan pada sebuah file atau beberapa file di repo."
+  },
+  {
+    "judul": "Cara Push",
+    "slug": "push",
+    "langkah": [
+      "Buka terminal atau command prompt.",
+      "Masuk ke direktori repo Anda.",
+      "Jalankan perintah <b>‘git add [nama-file]’</b> untuk menambahkan file ke staging area.",
+      "Jalankan perintah <b>‘git commit -m \"pesan commit\"’</b> untuk melakukan commit dengan pesan yang sesuai.",
+      "Jalankan perintah <b>‘git push’</b> untuk mengirim perubahan ke repo di GitLab."
+    ],
+    "deskripsi": "Push adalah proses mengirim perubahan yang telah Anda lakukan ke repo di GitLab."
+  },
+  {
+    "judul": "Cara Pull",
+    "slug": "pull",
+    "langkah": [
+      "Buka terminal atau command prompt.",
+      "Masuk ke direktori repo Anda.",
+      "Jalankan perintah <b>‘git pull’</b> untuk mengambil perubahan dari repo di GitLab dan menggabungkannya.",
+      "Jika ada konflik, resolusi konflik tersebut terlebih dahulu sebelum melanjutkan.",
+      "Setelah selesai, jalankan perintah <b>‘git push’</b> untuk mengirim perubahan Anda ke repo di GitLab."
+    ],
+    "deskripsi": "Pull adalah proses mengambil perubahan dari repo di GitLab dan menggabungkannya dengan repo lokal Anda."
+  },
+  {
+    "judul": "Cara Branching Project",
+    "slug": "branching",
+    "langkah": [
+      "Buka repo di GitLab.",
+      "Klik tombol \"New branch\" di bagian atas halaman.",
+      "Berikan nama untuk branch baru Anda.",
+      "Pilih branch yang ingin Anda jadikan dasar branch baru Anda.",
+      "Klik tombol \"Create branch\" untuk membuat branch baru."
+    ],
+    "deskripsi": "Branching adalah proses membuat salinan dari repo Anda untuk melakukan perubahan atau eksperimen tanpa mempengaruhi branch utama."
+  },
+  {
+    "judul": "Cara Merging Project",
+    "slug": "merging",
+    "langkah": [
+      "Checkout ke branch utama (biasanya master).",
+      "Klik tombol \"Merge request\" di bagian atas halaman repo.",
+      "Pilih branch mana yang ingin Anda gabungkan ke branch utama.",
+      "Berikan deskripsi untuk merge request Anda.",
+      "Klik tombol \"Submit merge request\".",
+      "Jika tidak ada konflik, klik tombol \"Merge\" untuk menggabungkan branch dengan branch utama."
+    ],
+    "deskripsi": "Merging adalah proses menggabungkan perubahan yang dilakukan pada branch lain dengan branch utama."
+  },
+  {
+    "judul": "Cara Resolve Conflict",
+    "slug": "resolve",
+    "langkah": [
+      "Jalankan perintah <b>‘git pull’</b> untuk mengambil perubahan terbaru dari repo di GitLab.",
+      "Git akan memberi tahu Anda file mana yang mengalami conflict. Buka file tersebut di editor teks Anda.",
+      "Perbaiki konflik secara manual dengan menghapus bagian yang tidak perlu dan menambahkan bagian yang hilang.",
+      "Setelah selesai, jalankan peri</b>ntah <b>‘git add [nama-file]’</b> untuk menambahkan file yang sudah diperbaiki ke staging area.",
+      "Jalankan perintah <b>‘git commit -m \"pesan commit\"’</b> untuk melakukan commit dengan pesan yang sesuai.",
+      "Push commit Anda ke repo dengan perintah git push."
+    ],
+    "deskripsi": "Conflict terjadi saat ada perubahan yang dilakukan pada satu file oleh dua atau lebih orang secara bersamaan, atau ada perubahan yang dilakukan pada branch yang sama oleh dua atau lebih orang."
+  }
+]
