@@ -105,10 +105,10 @@ function editData(key) {
   const biodata = JSON.parse(localStorage.getItem("BIODATA"));
   biodata.findIndex((data) => {
     if (data.keterangan === keyword) {
-      tanggal.value = data.tanggal;
+      tanggal.value = dateChooser(data.tanggal);
       keterangan.value = data.keterangan;
-      pendapatan.value = data.pendapatan;
-      pengeluaran.value = data.pengeluaran;
+      pendapatan.value = formatAngka(data.pendapatan);
+      pengeluaran.value = formatAngka(data.pengeluaran);
     }
   });
 
@@ -137,4 +137,17 @@ function formatRupiah(angka) {
     .format(angka)
     .replace(",00", "");
   return uang;
+}
+
+function formatAngka(rupiah) {
+  let angka = parseInt(rupiah.replace(/[^0-9]/g, ""));
+  return angka;
+}
+
+function dateChooser(tanggal) {
+  const arrayTanggal = tanggal.split("-"); // 31-04-2023 jadi [31,04,2023]
+  const hari = arrayTanggal[0];
+  const bulan = arrayTanggal[1];
+  const tahun = arrayTanggal[2];
+  return `${tahun}-${bulan}-${hari}`;
 }
