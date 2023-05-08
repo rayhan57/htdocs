@@ -24,7 +24,7 @@
   },
   {
     "judul": "Cara Membuat Repository",
-    "slug": "buat-repo",
+    "slug": "create-repo",
     "langkah": [
       "Login ke akun GitLab Anda.",
       "Klik tombol \"+\" di bagian atas kanan halaman.",
