@@ -49,7 +49,7 @@
       "Setelah selesai, push branch Anda ke repo dengan perintah <b>‘git push -f’</b>."
     ],
     "deskripsi": "Rebase adalah proses memperbarui branch Anda dengan branch utama dan menempatkan perubahan Anda di atasnya.",
-    "gambar": ""
+    "gambar": "img/rebase.svg"
   },
   {
     "judul": "Cara Commit",
@@ -62,7 +62,7 @@
       "Push commit Anda ke repo dengan perintah git push."
     ],
     "deskripsi": "Commit adalah proses menyimpan perubahan yang dilakukan pada sebuah file atau beberapa file di repo.",
-    "gambar": ""
+    "gambar": "img/commit.svg"
   },
   {
     "judul": "Cara Push",
@@ -75,7 +75,7 @@
       "Jalankan perintah <b>‘git push’</b> untuk mengirim perubahan ke repo di GitLab."
     ],
     "deskripsi": "Push adalah proses mengirim perubahan yang telah Anda lakukan ke repo di GitLab.",
-    "gambar": ""
+    "gambar": "img/push.svg"
   },
   {
     "judul": "Cara Pull",
@@ -88,7 +88,7 @@
       "Setelah selesai, jalankan perintah <b>‘git push’</b> untuk mengirim perubahan Anda ke repo di GitLab."
     ],
     "deskripsi": "Pull adalah proses mengambil perubahan dari repo di GitLab dan menggabungkannya dengan repo lokal Anda.",
-    "gambar": ""
+    "gambar": "img/pull.svg"
   },
   {
     "judul": "Cara Branching Project",
@@ -101,7 +101,7 @@
       "Klik tombol \"Create branch\" untuk membuat branch baru."
     ],
     "deskripsi": "Branching adalah proses membuat salinan dari repo Anda untuk melakukan perubahan atau eksperimen tanpa mempengaruhi branch utama.",
-    "gambar": ""
+    "gambar": "img/branching.svg"
   },
   {
     "judul": "Cara Merging Project",
@@ -115,7 +115,7 @@
       "Jika tidak ada konflik, klik tombol \"Merge\" untuk menggabungkan branch dengan branch utama."
     ],
     "deskripsi": "Merging adalah proses menggabungkan perubahan yang dilakukan pada branch lain dengan branch utama.",
-    "gambar": ""
+    "gambar": "img/merging.svg"
   },
   {
     "judul": "Cara Resolve Conflict",
@@ -129,6 +129,6 @@
       "Push commit Anda ke repo dengan perintah git push."
     ],
     "deskripsi": "Conflict terjadi saat ada perubahan yang dilakukan pada satu file oleh dua atau lebih orang secara bersamaan, atau ada perubahan yang dilakukan pada branch yang sama oleh dua atau lebih orang.",
-    "gambar": ""
+    "gambar": "img/resolve.svg"
   }
 ]
