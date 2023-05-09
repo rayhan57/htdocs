@@ -13,7 +13,7 @@ fetch("data/tutorial.json")
 
       content.innerHTML += `<div class="col-md-4">
                             <div class="card mb-3 border border-0 shadow bg-light">
-                              <img src="https://source.unsplash.com/1000x500?${data.slug}" class="card-img-top" alt="${data.slug}">
+                              <img src="${data.gambar}" class="card-img-top" alt="${data.gambar}">
                               <div class="card-body border-bottom">
                                 <h5 class="card-title">${data.judul}</h5>
                                 <p class="card-text">${data.deskripsi}</p>

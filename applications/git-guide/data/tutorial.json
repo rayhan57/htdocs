@@ -9,7 +9,8 @@
       "Masukkan informasi yang diperlukan, seperti username, alamat email, dan password.",
       "Verifikasi akun Anda melalui email yang dikirimkan oleh GitLab."
     ],
-    "deskripsi": ""
+    "deskripsi": "",
+    "gambar": "img/register.svg"
   },
   {
     "judul": "Cara Login di Gitlab",
@@ -20,7 +21,8 @@
       "Masukkan username atau alamat email, dan password yang telah dibuat saat mendaftar.",
       "Klik tombol \"Sign In\" untuk masuk ke akun Anda."
     ],
-    "deskripsi": ""
+    "deskripsi": "",
+    "gambar": "img/login.svg"
   },
   {
     "judul": "Cara Membuat Repository",
@@ -33,7 +35,8 @@
       "Pilih jenis aksesibilitas repo, apakah public atau private.",
       "Setelah selesai klik tombol \"Create project\" untuk membuat repo baru."
     ],
-    "deskripsi": ""
+    "deskripsi": "",
+    "gambar": "img/create-repo.svg"
   },
   {
     "judul": "Cara Rebase",
@@ -45,7 +48,8 @@
       "Resolusi konflik jika ada, lalu jalankan perintah <b>‘git rebase --continue’</b>.",
       "Setelah selesai, push branch Anda ke repo dengan perintah <b>‘git push -f’</b>."
     ],
-    "deskripsi": "Rebase adalah proses memperbarui branch Anda dengan branch utama dan menempatkan perubahan Anda di atasnya."
+    "deskripsi": "Rebase adalah proses memperbarui branch Anda dengan branch utama dan menempatkan perubahan Anda di atasnya.",
+    "gambar": ""
   },
   {
     "judul": "Cara Commit",
@@ -57,7 +61,8 @@
       "Jalankan perintah <b>‘git commit -m \"pesan commit\"’</b> untuk melakukan commit dengan pesan yang sesuai.",
       "Push commit Anda ke repo dengan perintah git push."
     ],
-    "deskripsi": "Commit adalah proses menyimpan perubahan yang dilakukan pada sebuah file atau beberapa file di repo."
+    "deskripsi": "Commit adalah proses menyimpan perubahan yang dilakukan pada sebuah file atau beberapa file di repo.",
+    "gambar": ""
   },
   {
     "judul": "Cara Push",
@@ -69,7 +74,8 @@
       "Jalankan perintah <b>‘git commit -m \"pesan commit\"’</b> untuk melakukan commit dengan pesan yang sesuai.",
       "Jalankan perintah <b>‘git push’</b> untuk mengirim perubahan ke repo di GitLab."
     ],
-    "deskripsi": "Push adalah proses mengirim perubahan yang telah Anda lakukan ke repo di GitLab."
+    "deskripsi": "Push adalah proses mengirim perubahan yang telah Anda lakukan ke repo di GitLab.",
+    "gambar": ""
   },
   {
     "judul": "Cara Pull",
@@ -81,7 +87,8 @@
       "Jika ada konflik, resolusi konflik tersebut terlebih dahulu sebelum melanjutkan.",
       "Setelah selesai, jalankan perintah <b>‘git push’</b> untuk mengirim perubahan Anda ke repo di GitLab."
     ],
-    "deskripsi": "Pull adalah proses mengambil perubahan dari repo di GitLab dan menggabungkannya dengan repo lokal Anda."
+    "deskripsi": "Pull adalah proses mengambil perubahan dari repo di GitLab dan menggabungkannya dengan repo lokal Anda.",
+    "gambar": ""
   },
   {
     "judul": "Cara Branching Project",
@@ -93,7 +100,8 @@
       "Pilih branch yang ingin Anda jadikan dasar branch baru Anda.",
       "Klik tombol \"Create branch\" untuk membuat branch baru."
     ],
-    "deskripsi": "Branching adalah proses membuat salinan dari repo Anda untuk melakukan perubahan atau eksperimen tanpa mempengaruhi branch utama."
+    "deskripsi": "Branching adalah proses membuat salinan dari repo Anda untuk melakukan perubahan atau eksperimen tanpa mempengaruhi branch utama.",
+    "gambar": ""
   },
   {
     "judul": "Cara Merging Project",
@@ -106,7 +114,8 @@
       "Klik tombol \"Submit merge request\".",
       "Jika tidak ada konflik, klik tombol \"Merge\" untuk menggabungkan branch dengan branch utama."
     ],
-    "deskripsi": "Merging adalah proses menggabungkan perubahan yang dilakukan pada branch lain dengan branch utama."
+    "deskripsi": "Merging adalah proses menggabungkan perubahan yang dilakukan pada branch lain dengan branch utama.",
+    "gambar": ""
   },
   {
     "judul": "Cara Resolve Conflict",
@@ -119,6 +128,7 @@
       "Jalankan perintah <b>‘git commit -m \"pesan commit\"’</b> untuk melakukan commit dengan pesan yang sesuai.",
       "Push commit Anda ke repo dengan perintah git push."
     ],
-    "deskripsi": "Conflict terjadi saat ada perubahan yang dilakukan pada satu file oleh dua atau lebih orang secara bersamaan, atau ada perubahan yang dilakukan pada branch yang sama oleh dua atau lebih orang."
+    "deskripsi": "Conflict terjadi saat ada perubahan yang dilakukan pada satu file oleh dua atau lebih orang secara bersamaan, atau ada perubahan yang dilakukan pada branch yang sama oleh dua atau lebih orang.",
+    "gambar": ""
   }
 ]
