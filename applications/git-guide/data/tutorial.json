@@ -1,7 +1,6 @@
 [
   {
     "judul": "Cara Mendaftar di GitLab",
-    "slug": "register",
     "langkah": [
       "Buka situs GitLab di https://gitlab.com/",
       "Klik tombol \"Sign In / Register\" di bagian kanan atas halaman.",
@@ -14,7 +13,6 @@
   },
   {
     "judul": "Cara Login di Gitlab",
-    "slug": "login",
     "langkah": [
       "Buka situs GitLab di https://gitlab.com/",
       "Klik tombol \"Sign In / Register\" di bagian kanan atas halaman.",
@@ -26,7 +24,6 @@
   },
   {
     "judul": "Cara Membuat Repository",
-    "slug": "create-repo",
     "langkah": [
       "Login ke akun GitLab Anda.",
       "Klik tombol \"+\" di bagian atas kanan halaman.",
@@ -40,7 +37,6 @@
   },
   {
     "judul": "Cara Rebase",
-    "slug": "rebase",
     "langkah": [
       "Checkout branch yang ingin Anda rebase.",
       "Jalankan perintah <b>‘git fetch’</b> untuk mengambil update dari branch utama.",
@@ -53,7 +49,6 @@
   },
   {
     "judul": "Cara Commit",
-    "slug": "commit",
     "langkah": [
       "Buka terminal atau command prompt.",
       "Masuk ke direktori repo Anda.",
@@ -66,7 +61,6 @@
   },
   {
     "judul": "Cara Push",
-    "slug": "push",
     "langkah": [
       "Buka terminal atau command prompt.",
       "Masuk ke direktori repo Anda.",
@@ -79,7 +73,6 @@
   },
   {
     "judul": "Cara Pull",
-    "slug": "pull",
     "langkah": [
       "Buka terminal atau command prompt.",
       "Masuk ke direktori repo Anda.",
@@ -92,7 +85,6 @@
   },
   {
     "judul": "Cara Branching Project",
-    "slug": "branching",
     "langkah": [
       "Buka repo di GitLab.",
       "Klik tombol \"New branch\" di bagian atas halaman.",
@@ -105,7 +97,6 @@
   },
   {
     "judul": "Cara Merging Project",
-    "slug": "merging",
     "langkah": [
       "Checkout ke branch utama (biasanya master).",
       "Klik tombol \"Merge request\" di bagian atas halaman repo.",
@@ -119,7 +110,6 @@
   },
   {
     "judul": "Cara Resolve Conflict",
-    "slug": "resolve",
     "langkah": [
       "Jalankan perintah <b>‘git pull’</b> untuk mengambil perubahan terbaru dari repo di GitLab.",
       "Git akan memberi tahu Anda file mana yang mengalami conflict. Buka file tersebut di editor teks Anda.",
@@ -130,5 +120,31 @@
     ],
     "deskripsi": "Conflict terjadi saat ada perubahan yang dilakukan pada satu file oleh dua atau lebih orang secara bersamaan, atau ada perubahan yang dilakukan pada branch yang sama oleh dua atau lebih orang.",
     "gambar": "img/resolve.svg"
+  },
+  {
+    "judul": "Cara Membuat Merge Request",
+    "langkah": [
+      "Buka repositori yang ingin Anda buat merge request di GitLab.",
+      "Pada halaman repositori, klik tab \"Merge Requests\".",
+      "Klik tombol \"New merge request\".",
+      "Pilih branch sumber (branch yang akan digabungkan) dan branch target (branch yang akan menerima perubahan).",
+      "Isi informasi merge request seperti judul dan deskripsi.",
+      "Klik \"Submit merge request\" untuk membuat merge request."
+    ],
+    "deskripsi": "Merge Request adalah fitur di GitLab yang memungkinkan Anda mengajukan perubahan kode dari satu branch ke branch lainnya.",
+    "gambar": "img/merge-request.svg"
+  },
+  {
+    "judul": "Cara Mengelola Issues",
+    "langkah": [
+      "Buka repositori yang ingin Anda kelola isu-isunya di GitLab.",
+      "Pada halaman repositori, klik tab \"Issues\".",
+      "Klik tombol \"New issue\" untuk membuat isu baru.",
+      "Isi informasi isu seperti judul, deskripsi, dan label yang relevan.",
+      "Jika diperlukan, tambahkan assignee (orang yang bertanggung jawab) atau assignee tim.",
+      "Klik \"Submit issue\" untuk membuat isu."
+    ],
+    "deskripsi": "Issues dalam GitLab adalah fitur untuk melacak, mengelola, dan berdiskusi tentang tugas, masalah, atau permintaan yang perlu diselesaikan dalam sebuah proyek.",
+    "gambar": "img/issue.svg"
   }
 ]
