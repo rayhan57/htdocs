@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,12 +10,54 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/de0d5c5a2a.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <nav class="navbar bg-info" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-info" data-bs-theme="dark">
       <div class="container">
-        <a class="navbar-brand" href="/">Git Guide</a>
+        <a class="navbar-brand" href="/git-guide">Git Guide</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <button
+                class="nav-link active dropdown-toggle mode"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-sun"></i>
+              </button>
+              <ul class="dropdown-menu col-3">
+                <li>
+                  <button class="dropdown-item light">
+                    <i class="fa-solid fa-sun"></i> Light
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item dark">
+                    <i class="fa-solid fa-moon"></i> Dark
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
